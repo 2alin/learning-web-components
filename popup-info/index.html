@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Pop-Up Info Box</h1>
+    <form>
+      <label>
+        Name:
+        <popup-info
+          img="./help.svg"
+          data-text="Your name. Should have only letters (at least 3) and spaces."
+        ></popup-info>
+        <input type="text" required pattern="\s*([a-zA-Z]\s*){3,}" />
+      </label>
+    </form>
+
+    <script src="./popup-info.js"></script>
+  </body>
+</html>
