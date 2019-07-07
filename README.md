@@ -1,2 +1,2 @@
-# learning-web-components
-Learning Web Components
+
+A set of examples made from tutorials, guides, docs or my own in order to learn Web Components. Nothing fancy.
