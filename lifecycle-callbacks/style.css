@@ -1,0 +1,46 @@
+:root {
+  --color: #333;
+  --hg-color: rgb(35, 104, 168);
+  --disabled-color: #ddd;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  color: var(--color);
+}
+
+button {
+  --button-size: 36px;
+  width: var(--button-size);
+  height: var(--button-size);
+  margin-right: 1rem;
+  background: var(--color) center / 85% no-repeat;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:focus,
+button:hover {
+  background-color: var(--hg-color);
+}
+
+button:disabled {
+  background-color: var(--disabled-color);
+  cursor: initial;
+}
+
+.add {
+  background-image: url('assets/add.svg');
+}
+
+.remove {
+  background-image: url('assets/remove.svg');
+}
+
+.update {
+  background-image: url('assets/refresh.svg');
+}
