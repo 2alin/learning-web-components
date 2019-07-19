@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+      :root {
+        --main-color: #217ac0;
+      }
+      body {
+        color: #333;
+      }
+      dl {
+        margin: 0 1rem;
+      }
+      dt {
+        font-weight: 600;
+        color: var(--main-color);
+        font-family: 'Hack', monospace;
+      }
+      dd {
+        margin-left: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <template id="element-details-template">
+      <style>
+        details {
+          font-family: 'Noto Sans', sans-serif;
+          margin-bottom: 0.5rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 1px solid;
+        }
+        .name {
+          font-weight: 600;
+          color: var(--main-color);
+          font-size: 1.2rem;
+        }
+        h4 {
+          display: inline-block;
+          margin: 0;
+          padding: 0.25rem 0.3rem;
+          border: 1px solid #cee9f9;
+          border-radius: 4px;
+          background: var(--main-color);
+          color: white;
+        }
+        .attributes {
+          margin: 0.5rem 1rem;
+          font-size: 0.9rem;
+        }
+        .attributes p {
+          margin-left: 1rem;
+          font-style: italic;
+        }
+      </style>
+      <details>
+        <summary>
+          <code class="name"
+            >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+          >
+          <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+        </summary>
+        <div class="attributes">
+          <h4>attributes</h4>
+          <slot name="attributes"><p>None</p></slot>
+        </div>
+      </details>
+    </template>
+
+    <element-details>
+      <span slot="element-name">slot</span>
+      <span slot="description">
+        A placeholder inside a web component that users can fill with their own
+        markup, with the effect of composing different DOM trees together.</span
+      >
+      <dl slot="attributes">
+        <dt>name</dt>
+        <dd>The name of the slot.</dd>
+      </dl>
+    </element-details>
+
+    <element-details>
+      <span slot="element-name">template</span>
+      <span slot="description">
+        A mechanism for holding client-side content that is not to be rendered
+        when a page is loaded but may subsquently be instantiated during runtime
+        using JavaScript</span
+      >
+    </element-details>
+  </body>
+</html>
