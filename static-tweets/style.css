@@ -1,0 +1,61 @@
+/* layout style */
+
+body {
+  display: flex;
+  margin: 0;
+}
+
+section {
+  padding: 1rem;
+}
+
+section#tweet-list {
+  flex: 1;
+}
+
+section#bookmark-list {
+  flex: 1;
+}
+
+/* tweet style */
+
+tweet-entry footer {
+  display: flex;
+  align-items: center;
+}
+
+tweet-entry footer button {
+  margin-right: 1rem;
+}
+
+/* button style */
+
+button {
+  --height-value: 2rem;
+  height: var(--height-value);
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(15, 89, 138);
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0 0.5em;
+  font-size: 0.95em;
+}
+
+button:hover,
+button:focus {
+  background-color: rgb(33, 132, 197);
+}
+
+button[is='bookmark-button'] {
+  width: var(--height-value);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('assets/bookmark.svg');
+}
+
+button[is='bookmark-button'][title='unbookmark'] {
+  background-image: url('assets/bookmark-filled.svg');
+}
