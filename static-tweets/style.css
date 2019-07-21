@@ -59,3 +59,17 @@ button[is='bookmark-button'] {
 button[is='bookmark-button'][title='unbookmark'] {
   background-image: url('assets/bookmark-filled.svg');
 }
+
+/* bookmark list style */
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul[is='bookmark-list'] li {
+  background: rgb(221, 221, 221);
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
